@@ -37,6 +37,6 @@ public class Transaction {
 
     @Override
     public String toString(){
-        return from + "should pay " + amount + " to " + to +"\n";
+        return from + " should pay " + amount + " to " + to +"\n";
     }
 }

@@ -3,6 +3,7 @@ package org.example;
 import org.example.Models.ExpensePaidBy;
 import org.example.Models.ExpenseSharedBy;
 import org.example.Models.Transaction;
+import org.example.Strategies.GreedySettlementStrategy;
 import org.example.Strategies.RoundRobinSettlementStrategy;
 import org.example.Strategies.SettlementStrategy;
 
@@ -32,7 +33,7 @@ public class Client {
         sharedBy.add(new ExpenseSharedBy("C", 4000));
         sharedBy.add(new ExpenseSharedBy("D", 3000));
 
-        settleUp(paidBy, sharedBy, new RoundRobinSettlementStrategy());
+        settleUp(paidBy, sharedBy, new GreedySettlementStrategy());
     }
     public static void settleUp(List<ExpensePaidBy> paidBy, List<ExpenseSharedBy> sharedBy,
                          SettlementStrategy settlementStrategy) {
